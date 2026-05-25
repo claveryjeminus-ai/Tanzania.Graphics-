@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics.Tanzania | Premium Graphic Design Workshop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Graphics.<span>Tanzania</span></div>
+        <ul class="nav-links">
+            <li><a href="#work">Selected Work</a></li>
+            <li><a href="#about">The Workshop</a></li>
+            <li><a href="#contact">Start a Project</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-container">
+            <span class="hero-badge">Visual Identity & Branding Workshop</span>
+            <h1>We shape high-contrast brand identities that demand attention.</h1>
+            <p>An independent graphic design workshop based in Tanzania. We specialize in turning bold ideas into scalable visual systems, product packaging, and modern digital identities.</p>
+            <div class="hero-actions">
+                <a href="#work" class="btn-primary">Explore Case Studies</a>
+                <a href="#contact" class="btn-secondary">Let's Talk</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="work" class="portfolio-section">
+        <div class="section-header">
+            <div>
+                <span class="sub-title">Portfolio</span>
+                <h2>Selected Case Studies</h2>
+            </div>
+            <p class="section-desc">A curated look at our latest design systems, packaging solutions, and brand implementations.</p>
+        </div>
+        
+        <div class="portfolio-grid" id="portfolio-grid">
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Loading curated gallery...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <span class="sub-title">Our Philosophy</span>
+                <h2>Design with a strong bias for structural clarity.</h2>
+                <p>At Graphics.Tanzania, we skip the fluff. We build striking visual configurations tailored to slice through market noise. From structural logos to complete digital transformations, our work balances premium elegance with high-energy modern art.</p>
+                
+                <div class="capabilities">
+                    <div class="cap-item"><strong>01 /</strong> Brand Strategy</div>
+                    <div class="cap-item"><strong>02 /</strong> Logo & Iconography</div>
+                    <div class="cap-item"><strong>03 /</strong> Product Packaging</div>
+                    <div class="cap-item) "><strong>04 /</strong> Digital Visuals</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="main-footer">
+        <div class="footer-container">
+            <span class="sub-title text-orange">Get In Touch</span>
+            <h2>Let's build an iconic brand together.</h2>
+            <a href="mailto:hello@graphicstanzania.com" class="footer-email">hello@graphicstanzania.com</a>
+            
+            <hr class="footer-divider">
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Graphics.Tanzania. All rights reserved.</p>
+                <p class="credit">Engineered via Static Netlify Architecture</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fetch project configurations compiled by Decap CMS
+        fetch('projects.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Database file not found');
+                return response.json();
+            })
+            .then(data => {
+                const gridElement = document.getElementById('portfolio-grid');
+                gridElement.innerHTML = ''; // Clear out the loading placeholder
+                
+                if (data.projects && data.projects.length > 0) {
+                    data.projects.forEach(project => {
+                        const card = document.createElement('article');
+                        
+                        // Capture layout alignment choice: standard, wide, or tall
+                        const alignmentClass = project.alignment && project.alignment !== 'standard' ? project.alignment : '';
+                        card.className = `project-card ${alignmentClass}`.trim();
+                        
+                        card.innerHTML = `
+                            <div class="card-image-wrapper">
+                                <img src="${project.image}" alt="${project.title}" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-metadata">
+                                    <h3>${project.title}</h3>
+                                    <p>${project.category}</p>
+                                </div>
+                                <div class="project-arrow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                </div>
+                            </div>
+                        `;
+                        gridElement.appendChild(card);
+                    });
+                } else {
+                    gridElement.innerHTML = `
+                        <div class="empty-state">
+                            <p>Your portfolio is currently empty. Head to your custom dashboard to add items.</p>
+                            <a href="/admin/" class="btn-primary" style="margin-top:20px;">Open Admin Panel</a>
+                        </div>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching layout data:', error);
+                document.getElementById('portfolio-grid').innerHTML = '<p class="error-msg">Failed to securely download assets. Please check backend config.</p>';
+            });
+
+        // Identity routing optimization
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+
+    <script>
+        // Fetch project configurations compiled by Decap CMS
+        fetch('projects.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Database file not found');
+                return response.json();
+            })
+            .then(data => {
+                const gridElement = document.getElementById('portfolio-grid');
+                gridElement.innerHTML = ''; // Clear out the loading placeholder
+                
+                if (data.projects && data.projects.length > 0) {
+                    data.projects.forEach(project => {
+                        const card = document.createElement('article');
+                        const alignmentClass = project.alignment && project.alignment !== 'standard' ? project.alignment : '';
+                        card.className = `project-card ${alignmentClass}`.trim();
+                        
+                        card.innerHTML = `
+                            <div class="card-image-wrapper">
+                                <img src="${project.image}" alt="${project.title}" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-metadata">
+                                    <h3>${project.title}</h3>
+                                    <p>${project.category}</p>
+                                </div>
+                            </div>
+                        `;
+                        gridElement.appendChild(card);
+                    });
+                } else {
+                    gridElement.innerHTML = `
+                        <div class="empty-state">
+                            <p>Your portfolio is currently empty. Head to your custom dashboard to add items.</p>
+                            <a href="/admin/" class="btn-primary" style="margin-top:20px;">Open Admin Panel</a>
+                        </div>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching layout data:', error);
+                document.getElementById('portfolio-grid').innerHTML = '<p class="error-msg">Failed to securely download assets.</p>';
+            });
+
+        // Fixed Identity routing logic
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
