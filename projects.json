@@ -1,3 +1,10 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "alignment": "tall",
+      "title": "phoi product",
+      "category": "medium",
+      "image": "images/uploads/phoi-12.png"
+    }
+  ]
 }
