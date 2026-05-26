@@ -793,3 +793,7 @@ body.dark-theme .contact__input {
     margin-right: auto;
   }
 }
+
+.portfolio__placeholder-card {
+    display: flex !important;
+}
