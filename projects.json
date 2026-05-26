@@ -1,3 +1,10 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "alignment": "standard",
+      "image": "images/uploads/gemini_generated_image_sdc9dwsdc9dwsdc9.png",
+      "title": "phoi",
+      "category": "medium"
+    }
+  ]
 }
