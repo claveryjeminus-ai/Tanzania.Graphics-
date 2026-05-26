@@ -1,200 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphics.Tanzania | Premium Graphic Design Workshop</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <nav class="navbar">
-        <div class="logo">Graphics.<span>Tanzania</span></div>
-        <ul class="nav-links">
-            <li><a href="#work">Selected Work</a></li>
-            <li><a href="#about">The Workshop</a></li>
-            <li><a href="#contact">Start a Project</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-container">
-            <span class="hero-badge">Visual Identity & Branding Workshop</span>
-            <h1>We shape high-contrast brand identities that demand attention.</h1>
-            <p>An independent graphic design workshop based in Tanzania. We specialize in turning bold ideas into scalable visual systems, product packaging, and modern digital identities.</p>
-            <div class="hero-actions">
-                <a href="#work" class="btn-primary">Explore Case Studies</a>
-                <a href="#contact" class="btn-secondary">Let's Talk</a>
-            </div>
-        </div>
-    </header>
-
-    <section id="work" class="portfolio-section">
-        <div class="section-header">
-            <div>
-                <span class="sub-title">Portfolio</span>
-                <h2>Selected Case Studies</h2>
-            </div>
-            <p class="section-desc">A curated look at our latest design systems, packaging solutions, and brand implementations.</p>
-        </div>
+        <link rel="stylesheet" href="swiper-bundle.min.css">
         
-        <div class="portfolio-grid" id="portfolio-grid">
-            <div class="loading-state">
-                <div class="spinner"></div>
-                <p>Loading curated gallery...</p>
-            </div>
-        </div>
-    </section>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="about-text">
-                <span class="sub-title">Our Philosophy</span>
-                <h2>Design with a strong bias for structural clarity.</h2>
-                <p>At Graphics.Tanzania, we skip the fluff. We build striking visual configurations tailored to slice through market noise. From structural logos to complete digital transformations, our work balances premium elegance with high-energy modern art.</p>
-                
-                <div class="capabilities">
-                    <div class="cap-item"><strong>01 /</strong> Brand Strategy</div>
-                    <div class="cap-item"><strong>02 /</strong> Logo & Iconography</div>
-                    <div class="cap-item"><strong>03 /</strong> Product Packaging</div>
-                    <div class="cap-item) "><strong>04 /</strong> Digital Visuals</div>
+        <link rel="stylesheet" href="styles.css">
+
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+        <title>Graphics.Tanzania | Professional Portfolio</title>
+    </head>
+    <body>
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+        
+        <header class="l-header" id="header">
+            <nav class="nav bd-grid">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <a href="#" class="nav__logo">Graphics.Tanzania</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#qualification" class="nav__link">Qualification</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__light">
+                    <i class='bx bx-moon change-theme' id="theme-button"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <div class="home__data">
+                        <span class="home__greeting">Hello, We are</span>
+                        <h1 class="home__name">Graphics.Tanzania</h1>
+                        <span class="home__profession">Visual Branding Workshop</span>
+                        <a href="Clay-Doe-Cv.pdf" download="" class="button button-light home__button">Download Studio Profile</a>
+                    </div>
+
+                    <div class="home__social">
+                        <a href="#" class="home__social-icon"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" class="home__social-icon"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="home__social-icon"><i class='bx bxl-vk'></i></a>
+                    </div>
+
+                    <div class="home__img">
+                        <img src="preview.png" alt="Graphics Tanzania Studio Hero Image">
+                    </div>
+                </div>
+            </section>
+            
+            <section class="about section" id="about">
+                <span class="section-subtitle">My Intro</span>
+                <h2 class="section-title">About Me</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__data">
+                        <p class="about__description">We design bold visual configurations and package designs tailored to break through market noise. From structural logos to product implementations, our work balances premium elegance with high-energy modern layout configurations.</p>
+                        <img src="preview.png" alt="About Image" class="about__img">
+                    </div>
+
+                    <div>
+                        <div class="about__information">
+                            <h3 class="about__information-title">Information</h3>
+                            <div class="about__information-data">
+                                <i class='bx bx-user about__information-icon'></i>
+                                <span>Graphics.Tanzania</span>
+                            </div>
+                            <div class="about__information-data">
+                                <i class='bx bx-phone about__information-icon'></i>
+                                <span>+255 000 000 000</span>
+                            </div>
+                            <div class="about__information-data">
+                                <i class='bx bx-envelope about__information-icon'></i>
+                                <span>hello@graphicstanzania.com</span>
+                            </div>
+                        </div>
+
+                        <div class="about__information">
+                            <h3 class="about__information-title">Support</h3>
+                            <div class="about__information-data">
+                                <i class='bx bx-medal about__information-icon'></i>
+                                <div>
+                                    <span class="about__information-subtitle">8+ Years</span>
+                                    <span class="about__information-subtitle-data">Experience</span>
+                                </div>
+                            </div>
+                            <div class="about__information-data">
+                                <i class='bx bx-briefcase about__information-icon'></i>
+                                <div>
+                                    <span class="about__information-subtitle">200+ Projects</span>
+                                    <span class="about__information-subtitle-data">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="qualification section" id="qualification">
+                <span class="section-subtitle">Experience & Education</span>
+                <h2 class="section-title">Qualification</h2>
+
+                <div class="qualification__container bd-grid">
+                    <div class="qualification__content">
+                        <h3 class="qualification__title">
+                            <i class='bx bx-education qualification__title-icon'></i> Education
+                        </h3>
+
+                        <div class="qualification__data">
+                            <h4 class="qualification__area">Master in Design</h4>
+                            <div class="qualification__box">
+                                <span class="qualification__work">Tanzania - Institute</span>
+                                <span class="qualification__year"><i class='bx bx-calendar qualification__calendar-icon'></i> 2018 - 2021</span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <h4 class="qualification__area">Graphic Design Course</h4>
+                            <div class="qualification__box">
+                                <span class="qualification__work">Tanzania - Studio</span>
+                                <span class="qualification__year"><i class='bx bx-calendar qualification__calendar-icon'></i> 2016 - 2018</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qualification__content">
+                        <h3 class="qualification__title">
+                            <i class='bx bx-briefcase-alt qualification__title-icon'></i> Experience
+                        </h3>
+
+                        <div class="qualification__data">
+                            <h4 class="qualification__area">Senior Brand Lead</h4>
+                            <div class="qualification__box">
+                                <span class="qualification__work">Graphics.Tanzania Workshop</span>
+                                <span class="qualification__year"><i class='bx bx-calendar qualification__calendar-icon'></i> 2021 - Present</span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <h4 class="qualification__area">Visual Designer</h4>
+                            <div class="qualification__box">
+                                <span class="qualification__work">Freelance Agency</span>
+                                <span class="qualification__year"><i class='bx bx-calendar qualification__calendar-icon'></i> 2018 - 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services section" id="services">
+                <span class="section-subtitle">What we offer</span>
+                <h2 class="section-title">Services</h2>
+
+                <div class="services__container bd-grid">
+                    <div class="services__data">
+                        <i class='bx bx-palette services__icon'></i>
+                        <h3 class="services__title">Brand Identity</h3>
+                        <p class="services__description">Crafting impactful logos, typography selection, color systems, and comprehensive corporate strategy guidelines.</p>
+                    </div>
+
+                    <div class="services__data">
+                        <i class='bx bx-package services__icon'></i>
+                        <h3 class="services__title">Product Packaging</h3>
+                        <p class="services__description">Designing structural, high-contrast visual wrappers, physical container labels, and real-world mockups.</p>
+                    </div>
+
+                    <div class="services__data">
+                        <i class='bx bx-laptop services__icon'></i>
+                        <h3 class="services__title">Digital Content</h3>
+                        <p class="services__description">Engineering premium visual setups for high-conversion web channels, media assets, and digital banners.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="project section">
+                <div class="project__container bd-grid">
+                    <div class="project__data">
+                        <h2 class="project__title">Have a project in mind?</h2>
+                        <p class="project__description">Reach out to us to map your conceptual strategies directly into high-fidelity design systems.</p>
+                        <a href="#contact" class="button button-light">Contact Us</a>
+                    </div>
+                    
+                    <img src="preview.png" alt="Project Mockup" class="project__img">
+                </div>
+            </section>
+
+            <section class="portfolio section" id="portfolio">
+                <span class="section-subtitle">My recent works</span>
+                <h2 class="section-title">Portfolio</h2>
+
+                <div class="portfolio__nav">
+                    <span class="portfolio__item active-portfolio" data-filter="all">All</span>
+                    <span class="portfolio__item" data-filter=".web">Branding</span>
+                    <span class="portfolio__item" data-filter=".ux">Packaging</span>
+                    <span class="portfolio__item" data-filter=".design">Digital</span>
+                </div>
+
+                <div class="portfolio__container bd-grid" id="dynamic-portfolio-grid">
+                    <p style="grid-column: 1/-1; text-align: center; color: var(--text-color); font-family: 'Poppins', sans-serif; padding: 40px 0;">
+                        Loading creative studio directory...
+                    </p>
+                </div>
+            </section>
+
+            <section class="testimonial section">
+                <span class="section-subtitle">What clients say</span>
+                <h2 class="section-title">Testimonials</h2>
+
+                <div class="testimonial__container swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="testimonial__content swiper-slide">
+                            <i class='bx bxs-quote-left testimonial__icon'></i>
+                            <p class="testimonial__description">The branding execution provided by Graphics.Tanzania completely transformed our product visibility on commercial market shelves. Clean structure and phenomenal accuracy.</p>
+                            <h3 class="testimonial__client">Laleh Cafe Manager</h3>
+                            <span class="testimonial__detail">Mbeya</span>
+                        </div>
+                        <div class="testimonial__content swiper-slide">
+                            <i class='bx bxs-quote-left testimonial__icon'></i>
+                            <p class="testimonial__description">Flawless packaging designs. They delivered vector files configured beautifully for industrial print manufacturing lines without scaling errors.</p>
+                            <h3 class="testimonial__client">Bare Earth Co.</h3>
+                            <span class="testimonial__detail">Dar es Salaam</span>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <section class="contact section" id="contact">
+                <span class="section-subtitle">Get in touch</span>
+                <h2 class="section-title">Contact Me</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__content">
+                        <div class="contact__box">
+                            <i class='bx bx-home contact__icon'></i>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__description">Mbeya, Tanzania</span>
+                        </div>
+
+                        <div class="contact__box">
+                            <i class='bx bx-phone contact__icon'></i>
+                            <h3 class="contact__title">Phone</h3>
+                            <span class="contact__description">+255 000 000 000</span>
+                        </div>
+
+                        <div class="contact__box">
+                            <i class='bx bx-envelope contact__icon'></i>
+                            <h3 class="contact__title">Email</h3>
+                            <span class="contact__description">hello@graphicstanzania.com</span>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <input type="text" placeholder="Name" class="contact__input">
+                            <input type="email" placeholder="Email" class="contact__input">
+                        </div>
+                        <input type="text" placeholder="Project Title" class="contact__input">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Message" class="contact__input"></textarea>
+                        <input type="submit" value="Send Message" class="button contact__button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">Graphics.Tanzania</h2>
+                    <p class="footer__description">Independent Graphic Design Workshop based in Tanzania.</p>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Explore</h3>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#services" class="footer__link">Services</a></li>
+                        <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Legal</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer__link">Terms of Service</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <footer id="contact" class="main-footer">
-        <div class="footer-container">
-            <span class="sub-title text-orange">Get In Touch</span>
-            <h2>Let's build an iconic brand together.</h2>
-            <a href="mailto:hello@graphicstanzania.com" class="footer-email">hello@graphicstanzania.com</a>
-            
-            <hr class="footer-divider">
-            
-            <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 Graphics.Tanzania. All rights reserved.</p>
-                <p class="credit">Engineered via Static Netlify Architecture</p>
-            </div>
-        </div>
-    </footer>
+            <p class="footer__copy">&copy; 2026 Graphics.Tanzania. All rights reserved.</p>
+        </footer>
+        
+        <script src="mixitup.min.js"></script>
+        
+        <script src="swiper-bundle.min.js"></script>
+        
+        <script src="gsap.min.js"></script>
+        
+        <script src="main.js"></script>
 
-    <script>
-        // Fetch project configurations compiled by Decap CMS
-        fetch('projects.json')
-            .then(response => {
-                if (!response.ok) throw new Error('Database file not found');
-                return response.json();
-            })
-            .then(data => {
-                const gridElement = document.getElementById('portfolio-grid');
-                gridElement.innerHTML = ''; // Clear out the loading placeholder
-                
-                if (data.projects && data.projects.length > 0) {
-                    data.projects.forEach(project => {
-                        const card = document.createElement('article');
-                        
-                        // Capture layout alignment choice: standard, wide, or tall
-                        const alignmentClass = project.alignment && project.alignment !== 'standard' ? project.alignment : '';
-                        card.className = `project-card ${alignmentClass}`.trim();
-                        
-                        card.innerHTML = `
-                            <div class="card-image-wrapper">
-                                <img src="${project.image}" alt="${project.title}" loading="lazy">
-                            </div>
-                            <div class="project-info">
-                                <div class="project-metadata">
-                                    <h3>${project.title}</h3>
-                                    <p>${project.category}</p>
+        <script>
+            // 1. Fetch live metadata uploads saved into projects.json from your admin panel
+            fetch('projects.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Database config schema unreadable.');
+                    return response.json();
+                })
+                .then(data => {
+                    const gridContainer = document.getElementById('dynamic-portfolio-grid');
+                    gridContainer.innerHTML = ''; // Wipe loading placeholder out of viewport
+                    
+                    if(data.projects && data.projects.length > 0) {
+                        data.projects.forEach(project => {
+                            const contentBlock = document.createElement('div');
+                            
+                            // Map filters (.web, .ux, .design) onto MixItUp wrapper hooks safely
+                            const filterTag = project.category_filter ? project.category_filter : 'web';
+                            contentBlock.className = `portfolio__content mix ${filterTag}`;
+                            
+                            contentBlock.innerHTML = `
+                                <a href="#"><img src="${project.image}" alt="${project.title}" class="portfolio__img"></a>
+                                <div class="portfolio__data">
+                                    <span class="portfolio__subtitle">${project.subtext || 'Design Concept'}</span>
+                                    <a href="#"><h2 class="portfolio__title">${project.title}</h2></a>
+                                    <a href="#" class="button button-link">View Details</a>
                                 </div>
-                                <div class="project-arrow">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                                </div>
-                            </div>
-                        `;
-                        gridElement.appendChild(card);
-                    });
-                } else {
-                    gridElement.innerHTML = `
-                        <div class="empty-state">
-                            <p>Your portfolio is currently empty. Head to your custom dashboard to add items.</p>
-                            <a href="/admin/" class="btn-primary" style="margin-top:20px;">Open Admin Panel</a>
-                        </div>`;
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching layout data:', error);
-                document.getElementById('portfolio-grid').innerHTML = '<p class="error-msg">Failed to securely download assets. Please check backend config.</p>';
-            });
-
-        // Identity routing optimization
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
-
-    <script>
-        // Fetch project configurations compiled by Decap CMS
-        fetch('projects.json')
-            .then(response => {
-                if (!response.ok) throw new Error('Database file not found');
-                return response.json();
-            })
-            .then(data => {
-                const gridElement = document.getElementById('portfolio-grid');
-                gridElement.innerHTML = ''; // Clear out the loading placeholder
-                
-                if (data.projects && data.projects.length > 0) {
-                    data.projects.forEach(project => {
-                        const card = document.createElement('article');
-                        const alignmentClass = project.alignment && project.alignment !== 'standard' ? project.alignment : '';
-                        card.className = `project-card ${alignmentClass}`.trim();
+                            `;
+                            gridContainer.appendChild(contentBlock);
+                        });
                         
-                        card.innerHTML = `
-                            <div class="card-image-wrapper">
-                                <img src="${project.image}" alt="${project.title}" loading="lazy">
-                            </div>
-                            <div class="project-info">
-                                <div class="project-metadata">
-                                    <h3>${project.title}</h3>
-                                    <p>${project.category}</p>
-                                </div>
-                            </div>
-                        `;
-                        gridElement.appendChild(card);
-                    });
-                } else {
-                    gridElement.innerHTML = `
-                        <div class="empty-state">
-                            <p>Your portfolio is currently empty. Head to your custom dashboard to add items.</p>
-                            <a href="/admin/" class="btn-primary" style="margin-top:20px;">Open Admin Panel</a>
-                        </div>`;
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching layout data:', error);
-                document.getElementById('portfolio-grid').innerHTML = '<p class="error-msg">Failed to securely download assets.</p>';
-            });
+                        // 2. Re-initialize MixItUp layout controller engine once elements exist in DOM tree
+                        if (typeof mixitup !== 'undefined') {
+                            mixitup('#dynamic-portfolio-grid', {
+                                selectors: { target: '.portfolio__content' },
+                                animation: { duration: 400 }
+                            });
+                        }
+                    } else {
+                        gridContainer.innerHTML = `
+                            <p style="grid-column: 1/-1; text-align: center; color: var(--text-color); font-family: 'Poppins', sans-serif; padding: 40px 0;">
+                                Your portfolio gallery is empty. Head to <a href="/admin/" style="color: var(--first-color); font-weight: bold; text-decoration: underline;">/admin</a> to upload case studies.
+                            </p>`;
+                    }
+                })
+                .catch(err => {
+                    console.error("Local schema parse loop fault:", err);
+                    document.getElementById('dynamic-portfolio-grid').innerHTML = 
+                        '<p style="grid-column: 1/-1; text-align: center; color: red;">Failed to read project collection data streams.</p>';
+                });
 
-        // Fixed Identity routing logic
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
-</body>
+            // 3. Keep Netlify authentication triggers routed securely to your dashboard dashboard
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/admin/";
+                        });
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>
