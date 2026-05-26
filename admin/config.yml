@@ -10,22 +10,22 @@ collections:
     label: "Website Engine Data"
     files:
       - name: "portfolio"
-        label: "Master Project Grid"
+        label: "Clay Doe Portfolio Grid"
         file: "projects.json"
         fields:
           - name: "projects"
             label: "Active Projects"
             widget: "list"
-            summary: '{{fields.title}} [{{fields.alignment}}]'
+            summary: '{{fields.title}} [{{fields.category_filter}}]'
             fields:
-              - { label: "Project Title / Name", name: "title", widget: "string", hint: "Example: Laleh Studio Packaging" }
-              - { label: "Category & Medium", name: "category", widget: "string", hint: "Example: Brand Identity & Strategy" }
-              - { label: "High-Resolution Image File", name: "image", widget: "image" }
-              - label: "Grid Structural Alignment"
-                name: "alignment"
+              - { label: "Project Title / Name", name: "title", widget: "string" }
+              - label: "Category Filter Tag (Lowercase, no spaces)"
+                name: "category_filter"
                 widget: "select"
                 options:
-                  - { label: "Standard Grid Block (1x1 Square)", value: "standard" }
-                  - { label: "Wide Horizontal Accent (2x1 Spanning Layout)", value: "wide" }
-                  - { label: "Tall Vertical Portrait Accent (1x2 Spanning Layout)", value: "tall" }
-                default: "standard"
+                  - { label: "Branding / Identity", value: "web" }
+                  - { label: "Product Packaging", value: "ux" }
+                  - { label: "Digital Content", value: "design" }
+                default: "web"
+              - { label: "Display Subtext Category", name: "subtext", widget: "string", hint: "Example: Logo Design" }
+              - { label: "High-Resolution Image File", name: "image", widget: "image" }
